@@ -333,6 +333,11 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 }
 		}
 		
+		public void fim() {
+			
+			System.out.println("Você foi cadastrado no nosso banco de dados. Boa sorte");
+		}
+		
 }		
 
 		
