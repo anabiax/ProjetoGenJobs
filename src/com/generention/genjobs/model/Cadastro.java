@@ -11,8 +11,8 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		private static  String SQL = null;
 		private static  String PHP = null;
 		private static String DataScience = null;
-		int op;
-		boolean loop = true;
+		int op, i=0;
+		boolean error = false;
 		Scanner leia = new Scanner(System.in);
 		public String nome;
 		public String email;
@@ -83,40 +83,39 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			System.out.println("\n\n\nInforme seus dados cadastrais:");
 			System.out.println("Nome:");
 			this.nome = leia.nextLine();
+			
 			System.out.println("CPF: ");
 			this.cpf = leia.nextLine();
 			
-			
+			if(this.cpf.length()!=11)
+			{
+				do {	
+					System.out.println("CPF inválido. Preencha apenas 11 números do cadastro");
+						System.out.println("CPF: ");
+							this.cpf = leia.nextLine();
+								}while(this.cpf.length()!=11); }
 				
-			
-			if(this.cpf.length()!=2) {
-				System.out.println("CPF inválido. Digite novamente");
-				System.out.println("CPF: ");
-			
-			}	else{ 
 				System.out.println("Insira seu endereço de email: ");
-				this.email = leia.nextLine();
-				this.cpf = leia.nextLine();//exceção do pq não aceitar o erro na digitação de letra e números maiores que 12.
-				loop = true;
-			}
-					
+				this.email = leia.nextLine();*/
+						
+				
+			
 				
 				
 				
-				System.out.println("Telefone:");
-				this.telefone = leia.nextFloat();
+				
 				System.out.println("CEP: ");
 				this.cep = leia.nextInt();
 				System.out.println("Endereço: ");
-				this.endereco = leia.next();*/
+				this.endereco = leia.next();
 				System.out.println("Cidade: ");
 				this.cidade = leia.nextLine();//não da a opção de escrita
 				System.out.println(this.nome+", você será redirecionado....");
 				
-				
+		
 			
 			
-				
+
 			 }
 		
 		
