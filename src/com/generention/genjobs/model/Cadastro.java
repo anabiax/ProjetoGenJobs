@@ -12,7 +12,8 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		private static  String PHP = null;
 		private static String DataScience = null;
 		int op, i=0;
-		boolean error = false;
+		boolean error = true;
+		boolean loop = true;
 		Scanner leia = new Scanner(System.in);
 		public String nome;
 		public String email;
@@ -78,7 +79,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		
 		public void visualizar()  {
 			
-			/*System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
+			System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
 			System.out.println("\t\t\t\tGENJOBS");
 			System.out.println("\n\n\nInforme seus dados cadastrais:");
 			System.out.println("Nome:");
@@ -96,16 +97,43 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 								}while(this.cpf.length()!=11); }
 				
 				System.out.println("Insira seu endereço de email: ");
-				this.email = leia.nextLine();*/
+				this.email = leia.nextLine();
 						
 				
-			
+		do {	
+				try {
+					System.out.println("Telefone: ");
+						this.telefone = leia.nextFloat();
+							loop = false;
+									
+				}catch(java.util.InputMismatchException e) {
+					System.err.println("Exceção: "+e);
+					leia.nextLine();
+					System.out.println("Digite apenas números. ");
+					
+					
+				}
+		}while(loop); 
+						
+				
+				
+		do {	
+				try {
+					System.out.println("CEP: ");
+						this.cep = leia.nextInt();
+								error = false;
+										
+				}catch(java.util.InputMismatchException e) {
+						System.err.println("Exceção: "+e);
+						leia.nextLine();
+						System.out.println("Digite apenas números. ");
+						
+						
+					}
+			}while(error); 
 				
 				
 				
-				
-				System.out.println("CEP: ");
-				this.cep = leia.nextInt();
 				System.out.println("Endereço: ");
 				this.endereco = leia.next();
 				System.out.println("Cidade: ");
