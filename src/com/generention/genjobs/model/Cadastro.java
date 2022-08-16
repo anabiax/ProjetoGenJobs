@@ -3,8 +3,14 @@ package com.generention.genjobs.model;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class Cadastro {
+public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		
+		private static String Java = null;
+		private static String JavaScript = null;
+		private static  String Phyton = null;
+		private static  String SQL = null;
+		private static  String PHP = null;
+		private static String DataScience = null;
 		int op;
 		boolean loop = true;
 		Scanner leia = new Scanner(System.in);
@@ -72,7 +78,7 @@ public class Cadastro {
 		
 		public void visualizar()  {
 			
-			System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
+			/*System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
 			System.out.println("\t\t\t\tGENJOBS");
 			System.out.println("\n\n\nInforme seus dados cadastrais:");
 			System.out.println("Nome:");
@@ -80,29 +86,36 @@ public class Cadastro {
 			System.out.println("CPF: ");
 			this.cpf = leia.nextLine();
 			
-			do {
+			
 				
 			
-			if(this.cpf.length()==11) {
+			if(this.cpf.length()!=2) {
+				System.out.println("CPF inválido. Digite novamente");
+				System.out.println("CPF: ");
+			
+			}	else{ 
 				System.out.println("Insira seu endereço de email: ");
 				this.email = leia.nextLine();
+				this.cpf = leia.nextLine();//exceção do pq não aceitar o erro na digitação de letra e números maiores que 12.
+				loop = true;
+			}
+					
+				
+				
+				
 				System.out.println("Telefone:");
 				this.telefone = leia.nextFloat();
 				System.out.println("CEP: ");
 				this.cep = leia.nextInt();
 				System.out.println("Endereço: ");
-				this.endereco = leia.next();
+				this.endereco = leia.next();*/
 				System.out.println("Cidade: ");
 				this.cidade = leia.nextLine();//não da a opção de escrita
 				System.out.println(this.nome+", você será redirecionado....");
 				
-				loop = true; }
-			
-			else {System.out.println("CPF inválido. Digite novamente");
-			System.out.println("CPF: ");
-			this.cpf = leia.nextLine();
 				
-			}}while(loop);
+			
+			
 				
 			 }
 		
@@ -123,7 +136,7 @@ public class Cadastro {
 		    System.out.println("\n5- Outros");
 		    System.out.println("\n Digite a sua opção: ");
 
-		            op = leia.nextInt();  // o tipo de dados é Int(eiro)
+		            op = leia.nextInt();  
 		            switch(op) {
 		            case 1: 
 		                System.out.println("\n Desenvolvimento (Full Stack, Front-end, Back-end)");
@@ -157,9 +170,171 @@ public class Cadastro {
 
 		            }
 		        }
+		@Override
+		public void dv() {
+			
+			
+		}
+		@Override
+		public void datinha() {
 		
 			
 		}
+		@Override
+		public void gp() {
+			
+			
+		}
+		@Override
+		public void desenvolver() {
+		
+			String Java;
+			String JavaScript;
+			String Phyton;
+			String SQL;
+			String PHP;
+			String DataScience;
+			
+
+		}
+
+		public String getJava() {
+			return Java;
+		}
+
+
+		public void setJava(String java) {
+			Java = java;
+		}
+
+		public String getJavaScript() {
+			return JavaScript;
+		}
+
+
+		public void setJavaScript(String javaScript) {
+			JavaScript = javaScript;
+		}
+
+
+		public String getPhyton() {
+			return Phyton;
+		}
+
+		public void setPhyton(String phyton) {
+			Phyton = phyton;
+		}
+
+
+		public String getSQL() {
+			return SQL;
+		}
+
+
+		public void setSQL(String sQL) {
+			SQL = sQL;
+		}
+
+
+		public String getPHP() {
+			return PHP;
+		}
+
+
+		public void setPHP(String pHP) {
+			PHP = pHP;
+		}
+
+
+		public String getDataScience() {
+			return DataScience;
+		}
+
+
+		public void setDataScience(String dataScience) {
+			DataScience = dataScience;
+		}
+
+		public void escolher() {
+				System.out.println("\n ------------------------------------");
+				System.out.println("VAGAS");
+				System.out.println("\n ------------------------------------");
+				System.out.println("Escolha a Linguagem de ProgramaÃ§Ã£o:");
+				System.out.println("\n1- Java");
+				System.out.println("\n2- JavaScript");
+				System.out.println("\n3- Python");
+				System.out.println("\n4- SQL");
+				System.out.println("\n5- PHP");
+				System.out.println("\n6 -DataScience");
+
+		op = leia.nextInt();	
+		switch (op) {
+		
+		case 1:
+			System.out.println("Java");
+			
+			break;
+		case 2:
+			System.out.println("JavaScript");
+			break;
+		case 3:
+			System.out.println("Phyton");
+			break;
+		case 4:
+			System.out.println("SQL");
+			break;
+		case 5:
+			System.out.println("PHP");
+			break;
+			
+		case 6:
+			System.out.println("DataScience");
+			break;
+			
+		default:
+            System.out.println("\n Opção inválida");
+
+		}
+		}	
+		
+		public void nivel() {
+			System.out.println("\n ------------------------------------");
+			System.out.println("Experiência profissional: ");
+			System.out.println("\n ------------------------------------");
+			System.out.println("\n1- Trainee");
+			System.out.println("\n2- Júnior");
+			System.out.println("\n3- Pleno");
+			System.out.println("\n4- Sênior");
+			System.out.println("\n5- Especialista");
+			
+
+	op = leia.nextInt();	
+	switch (op) {
+	
+	case 1:
+		System.out.println("Trainee");
+		
+		break;
+	case 2:
+		System.out.println("Júnior");
+		break;
+	case 3:
+		System.out.println("Pleno");
+		break;
+	case 4:
+		System.out.println("Sênior");
+		break;
+	case 5:
+		System.out.println("Especialista");
+		break;
+				
+	default:
+        System.out.println("\n Opção inválida");
+}
+		}
+		
+}		
+
 		
 		
 		

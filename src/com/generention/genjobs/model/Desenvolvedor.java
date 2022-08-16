@@ -1,55 +1,93 @@
 package com.generention.genjobs.model;
 
-public class Desenvolvedor extends Cadastro {
-	int op;
-
+public class Desenvolvedor extends Cadastro  {
 	
-	public int getOp() {
-		return op;
-	}
+	private String Java;
+	private String JavaScript;
+	private String Python;
+	private String SQL;
+	private String PHP;
+	private String DataScience;
 
-
-	public void setOp(int op) {
-		this.op = op;
-	}
-
-
-	public Desenvolvedor(int op) {
-		super();
-		this.op = op;
-	}
-
-
-	public void vozesDaAna() {
-		System.out.println("Desenvolvedor Java, faremos algumas perguntas para saber qual vaga se encaixa em seu perfil.");
-		System.out.println("-----Opções-----");
-		System.out.println("\n1- Front end");
-		System.out.println("\n2- Back end");
-		System.out.println("\n3- Full Stack");
-		
-		 op = leia.nextInt();  // o tipo de dados é Int(eiro)
-         switch(op) {
-         case 1: 
-             System.out.println("\nFull Stack");
-             break; // finalizar cada case
-         
-
-      
-         case 2: 
-             System.out.println("\nFront-end");
-             break; 
-         
-        
-         case 3: 
-             System.out.println("\nBack-end");
-             break; 
-   
-         
-         default:
-             System.out.println("\n Opção inválida");
-		
-         }
+public Desenvolvedor(String java, String javaScript, String python, String sQL, String pHP, String dataScience) {
 	
+		Java = java;
+		JavaScript = javaScript;
+		Python = python;
+		SQL = sQL;
+		PHP = pHP;
+		DataScience = dataScience;
 	}
-	
+
+public String getJava() {
+	return Java;
+}
+
+
+public void setJava(String java) {
+	Java = java;
+}
+
+public String getJavaScript() {
+	return JavaScript;
+}
+
+
+public void setJavaScript(String javaScript) {
+	JavaScript = javaScript;
+}
+
+
+public String getPhyton() {
+	return Python;
+}
+
+public void setPhyton(String python) {
+	Python = python;
+}
+
+
+public String getSQL() {
+	return SQL;
+}
+
+
+public void setSQL(String sQL) {
+	SQL = sQL;
+}
+
+
+public String getPHP() {
+	return PHP;
+}
+
+
+public void setPHP(String pHP) {
+	PHP = pHP;
+}
+
+
+public String getDataScience() {
+	return DataScience;
+}
+
+
+public void setDataScience(String dataScience) {
+	DataScience = dataScience;
+}
+
+public void conferir() {
+		System.out.println("\n ------------------------------------");
+		System.out.println("VAGAS");
+		System.out.println("\n ------------------------------------");
+		System.out.println("Escolha a Linguagem de ProgramaÃ§Ã£o:");
+		System.out.println(""+this.Java);
+		System.out.println(""+this.JavaScript);
+		System.out.println(""+this.Python);
+		System.out.println(""+this.SQL);
+		System.out.println("" + this.PHP);
+		System.out.println(""+this.DataScience);
+
+	}
+
 }
