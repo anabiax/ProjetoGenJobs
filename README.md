@@ -5,7 +5,7 @@ O sistema desenvolvido é voltado para o cadastro de tecnologistas numa platafor
 
 > :construction: Projeto em construção :construction:
 
-itens de atenção:
+itens de atenção a serem implementados:
 
 dividir o código em classes, visando diminuir a SuperClass intitulada "cadastro";
 
