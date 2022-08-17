@@ -5,15 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		
-		private static String Java = null;
-		private static String JavaScript = null;
-		private static  String Phyton = null;
-		private static  String SQL = null;
-		private static  String PHP = null;
-		private static String DataScience = null;
-		int op, i=0;
-		boolean error = true;
-		boolean loop = true;
+		
+		int op;
+		boolean error = true;//telefone cpf=aceita até 11 números
+		boolean loop = true;//cep
 		Scanner leia = new Scanner(System.in);
 		public String nome;
 		public String email;
@@ -22,11 +17,9 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		private int cep;
 		private String cidade;
 		private String endereco;
-		private double teste;
-		private String emailTeste;
 		public Cadastro() {
 			
-			this.teste = teste;
+			
 			this.nome = nome;
 			this.email = email;
 			this.telefone = telefone;
@@ -91,70 +84,65 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			if(this.cpf.length()!=11)
 			{
 				do {	
-					System.out.println("CPF inválido. Preencha apenas 11 números do cadastro");
+					System.out.println("CPF inválido. Preencha apenas 11 números.");
 						System.out.println("CPF: ");
 							this.cpf = leia.nextLine();
 								}while(this.cpf.length()!=11); }
 				
-				System.out.println("Insira seu endereço de email: ");
-				this.email = leia.nextLine();
+			System.out.println("Insira seu endereço de email: ");
+			this.email = leia.nextLine();
 						
 				
-		do {	
-				try {
-					System.out.println("Telefone: ");
-						this.telefone = leia.nextFloat();
-							loop = false;
+				do {	
+					try {
+						System.out.println("Telefone: ");
+							this.telefone = leia.nextFloat();
+								loop = false;
 									
-				}catch(java.util.InputMismatchException e) {
-					System.err.println("Exceção: "+e);
-					leia.nextLine();
-					System.out.println("Digite apenas números. ");
+					}catch(java.util.InputMismatchException e) {
+						System.err.println("Exceção: "+e);
+						leia.nextLine();
+						System.out.println("Digite apenas números. ");
 					
 					
 				}
-		}while(loop); 
+					}while(loop); 
 						
 				
 				
-		do {	
-				try {
-					System.out.println("CEP: ");
-						this.cep = leia.nextInt();
+				do {	
+					try {
+						System.out.println("CEP: ");
+							this.cep = leia.nextInt();
 								error = false;
 										
-				}catch(java.util.InputMismatchException e) {
+					}catch(java.util.InputMismatchException e) {
 						System.err.println("Exceção: "+e);
 						leia.nextLine();
 						System.out.println("Digite apenas números. ");
 						
 						
-					}
-			}while(error); 
-				
-				
+				}
+					}while(error); 
+								
 				
 				System.out.println("Endereço: ");
 				this.endereco = leia.next();
 				System.out.println("Cidade: ");
 				this.cidade = leia.nextLine();//não da a opção de escrita
 				System.out.println(this.nome+", você será redirecionado....");
-				
 		
-			
-			
-
 			 }
-		
 		
 		public void paginaInicial() {
 			
 		
-			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGEN JOBS, TRABALHANDO PARA VOCÊ TRABALHAR\n\n");
-			System.out.println("A nossa plataforma é feita através do match entre você e os nossos colaboradores.\nResponda as perguntas abaixo.");
+				System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGEN JOBS, TRABALHANDO PARA VOCÊ TRABALHAR\n\n");
+				System.out.println("A nossa plataforma é feita através do match entre você e os nossos colaboradores.\nResponda as perguntas abaixo.");
 			
 		}
 		public void profissao() {
+			do {
 			System.out.println("\n Áreas de atuação");
 		    System.out.println("\n1- Desenvolvimento (Full Stack, Front-end, Back-end");
 		    System.out.println("\n2- DevOps");
@@ -163,19 +151,18 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		    System.out.println("\n5- Outros");
 		    System.out.println("\n Digite a sua opção: ");
 
-		            op = leia.nextInt();  
+		           op = leia.nextInt();  
 		            switch(op) {
+		            
 		            case 1: 
-		                System.out.println("\n Desenvolvimento (Full Stack, Front-end, Back-end)");
+		            	System.out.println("\n Desenvolvimento (Full Stack, Front-end, Back-end)");
 		                break; // finalizar cada case
 		            
-
 		         
 		            case 2: 
 		                System.out.println("\n DevOps");
 		                break; 
-		            
-		           
+		            		           
 		            case 3: 
 		                System.out.println("\n Data Science");
 		                break; 
@@ -183,9 +170,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		            case 4: 
 		                System.out.println("\n Gestão de projetos");
 		                break; 
-		            
-
-		            
+		            		            
 		            case 5: 
 		                System.out.println("\n Outros");
 		                break; 
@@ -194,24 +179,126 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		            default:
 		                System.out.println("\n Opção inválida");
 		              
-
 		            }
+		            }while(op<1 || op>5);
 		        }
 		@Override
 		public void dv() {
 			
+			do {
+				System.out.println("\n ------------------------------------");
+				System.out.println("Atribuições DevOps:");
+				System.out.println("\n ------------------------------------");
+				System.out.println("Você preenche alguns dos atributos para o cargo?");
+				System.out.println("\n Conhecimento de metodologias ágeis, gerenciamento de conflitos, linguagem de programação e automação de processos.");
+				System.out.println("\n1 - sim");
+				System.out.println("\n2 - não");
+
+				op = leia.nextInt();	
+				switch (op) {
+				
+				case 1:
+					System.out.println("sim");
+					
+					break;
+				case 2:
+					System.out.println("não");
+					break;
+				
+				default:
+		            System.out.println("\n Opção inválida");
+		        
+				}
+				}while(op < 1 || op >2);
+			}
 			
-		}
+				
+				
+				
+			
+		
 		@Override
 		public void datinha() {
 		
 			
 		}
-		@Override
+		@Override //nivel de ingles 
+		//nivel profissional
 		public void gp() {
+		
+			do {
+			System.out.println("\n ------------------------------------");
+			System.out.println("Nível de Inglês: ");
+			System.out.println("\n ------------------------------------");
+			System.out.println("\n1- Básico");
+			System.out.println("\n2- Intermédiario");
+			System.out.println("\n3- Avançado");
+			System.out.println("\n4- Fluente");
 			
+			
+			op = leia.nextInt();	
+			switch (op) {
+			
+			case 1:
+				System.out.println("Básico");
+				
+				break;
+			case 2:
+				System.out.println("Intermédiario");
+				break;
+			case 3:
+				System.out.println("Avançado");
+				break;
+			case 4:
+				System.out.println("Fluente");
+				break;
+			
+				
+			default:
+	            System.out.println("\n Opção inválida");		
 			
 		}
+			}while(op < 1 || op >4);
+		}
+		public void experienciaGp() {
+		
+			do {
+				System.out.println("\n ------------------------------------");
+				System.out.println("Experiência profissional: ");
+				System.out.println("\n ------------------------------------");
+				System.out.println("\n1- 1 ano - 3 anos");
+				System.out.println("\n2- 3 anos - 5 anos");
+				System.out.println("\n3- 5 ano - 7 anos");
+				System.out.println("\n4- 7 ano - 10 anos");
+				System.out.println("\n5- Mais que 10 anos");
+
+		op = leia.nextInt();	
+		switch (op) {
+		
+		case 1:
+			System.out.println();
+			
+			break;
+		case 2:
+			System.out.println();
+			break;
+		case 3:
+			System.out.println();
+			break;
+		case 4:
+			System.out.println();
+			break;
+		case 5:
+			System.out.println();
+			break;
+					
+		default:
+	        System.out.println("\n Opção inválida");
+	}
+			}while(op < 1 || op >2);
+			}
+		
+		
 		@Override
 		public void desenvolver() {
 		
@@ -225,64 +312,10 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 
 		}
 
-		public String getJava() {
-			return Java;
-		}
-
-
-		public void setJava(String java) {
-			Java = java;
-		}
-
-		public String getJavaScript() {
-			return JavaScript;
-		}
-
-
-		public void setJavaScript(String javaScript) {
-			JavaScript = javaScript;
-		}
-
-
-		public String getPhyton() {
-			return Phyton;
-		}
-
-		public void setPhyton(String phyton) {
-			Phyton = phyton;
-		}
-
-
-		public String getSQL() {
-			return SQL;
-		}
-
-
-		public void setSQL(String sQL) {
-			SQL = sQL;
-		}
-
-
-		public String getPHP() {
-			return PHP;
-		}
-
-
-		public void setPHP(String pHP) {
-			PHP = pHP;
-		}
-
-
-		public String getDataScience() {
-			return DataScience;
-		}
-
-
-		public void setDataScience(String dataScience) {
-			DataScience = dataScience;
-		}
+		
 
 		public void escolher() {
+			do {
 				System.out.println("\n ------------------------------------");
 				System.out.println("VAGAS");
 				System.out.println("\n ------------------------------------");
@@ -290,9 +323,9 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 				System.out.println("\n1- Java");
 				System.out.println("\n2- JavaScript");
 				System.out.println("\n3- Python");
-				System.out.println("\n4- SQL");
+				System.out.println("\n4- RUBY");
 				System.out.println("\n5- PHP");
-				System.out.println("\n6 -DataScience");
+				
 
 		op = leia.nextInt();	
 		switch (op) {
@@ -305,26 +338,25 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			System.out.println("JavaScript");
 			break;
 		case 3:
-			System.out.println("Phyton");
+			System.out.println("Python");
 			break;
 		case 4:
-			System.out.println("SQL");
+			System.out.println("RUBY");
 			break;
 		case 5:
 			System.out.println("PHP");
 			break;
 			
-		case 6:
-			System.out.println("DataScience");
-			break;
-			
+		
 		default:
             System.out.println("\n Opção inválida");
 
 		}
+			}while(op < 1 || op >5);
 		}	
 		
 		public void nivel() {
+			do {
 			System.out.println("\n ------------------------------------");
 			System.out.println("Experiência profissional: ");
 			System.out.println("\n ------------------------------------");
@@ -358,6 +390,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 	default:
         System.out.println("\n Opção inválida");
 }
+			}while(op < 1 || op >2);
 		}
 		
 		public void fim() {
@@ -368,7 +401,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 }		
 
 		
-		
+
 		
 		
 	
