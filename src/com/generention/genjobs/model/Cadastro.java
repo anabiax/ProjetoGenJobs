@@ -17,8 +17,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		private int cep;
 		private String cidade;
 		private String endereco;
-		public Cadastro() {
-			
+		{
 			
 			this.nome = nome;
 			this.email = email;
@@ -27,6 +26,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			this.cep = cep;
 			this.cidade = cidade;
 			this.endereco = endereco;
+			
 		}
 		public String getNome() {
 			return nome;
@@ -105,8 +105,8 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 						System.out.println("Digite apenas números. ");
 					
 					
-				}
-					}while(loop); 
+					}
+				}while(loop); 
 						
 				
 				
@@ -122,16 +122,17 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 						System.out.println("Digite apenas números. ");
 						
 						
-				}
-					}while(error); 
+					}
+				}while(error); 
 								
 				
 				System.out.println("Endereço: ");
 				this.endereco = leia.next();
 				System.out.println("Cidade: ");
 				this.cidade = leia.nextLine();//não da a opção de escrita
+				
 				System.out.println(this.nome+", você será redirecionado....");
-		
+				
 			 }
 		
 		public void paginaInicial() {
@@ -149,7 +150,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		    System.out.println("\n3- Data Science");
 		    System.out.println("\n4- Gestão de projetos");
 		    System.out.println("\n5- Outros");
-		    System.out.println("\n Digite a sua opção: ");
+		    System.out.println("\nDigite a sua opção: ");
 
 		           op = leia.nextInt();  
 		            switch(op) {
@@ -189,10 +190,12 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 				System.out.println("\n ------------------------------------");
 				System.out.println("Atribuições DevOps:");
 				System.out.println("\n ------------------------------------");
-				System.out.println("Você preenche alguns dos atributos para o cargo?");
-				System.out.println("\n Conhecimento de metodologias ágeis, gerenciamento de conflitos, linguagem de programação e automação de processos.");
+				System.out.println("Você preenche alguns dos atributos para o cargo?\n");
+				System.out.println("Obs: mesmo se você não conhecer ainda esse tópico, não desanime! Continue estudando e se aprimorando continuamente.");
+				System.out.println("\n\nConhecimento de metodologias ágeis, gerenciamento de conflitos, linguagem de programação e automação de processos.");
 				System.out.println("\n1 - sim");
-				System.out.println("\n2 - não");
+				System.out.println("\n2 - não\n");
+				System.out.println("Digite sua opção: ");
 
 				op = leia.nextInt();	
 				switch (op) {
@@ -218,12 +221,84 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			
 		
 		@Override
-		public void datinha() {
-		
+		public void datinha() { 
 			
+		do {
+		System.out.println("\n ------------------------------------");
+		System.out.println("Atribuições Data Science:");
+		System.out.println("\n ------------------------------------");
+		System.out.println("Você tem conhecimento da linguagem Python?");
+		System.out.println("\n1 - sim");
+		System.out.println("\n2 - não");
+		System.out.println("Digite sua opção: ");
+		
+		op = leia.nextInt();	
+		switch (op) {
+		
+		case 1:
+			System.out.println("sim");
+			
+			break;
+		case 2:
+			System.out.println("não");
+			break;
+		
+		default:
+            System.out.println("\n Opção inválida");
 		}
-		@Override //nivel de ingles 
-		//nivel profissional
+		}while(op < 1 || op >2);
+	
+		do {
+		
+		System.out.println("\nVocê tem habilidade de analisar dados matemáticos e estatísticas ?");
+		System.out.println("\n1 - sim");
+		System.out.println("\n2 - não");
+		System.out.println("Digite sua opção: ");
+
+		op = leia.nextInt();	
+		switch (op) {
+		
+		case 1:
+			System.out.println("sim");
+			
+			break;
+		case 2:
+			System.out.println("não");
+			break;
+		
+		default:
+            System.out.println("\n Opção inválida");
+		}
+		
+		}while(op < 1 || op >2);
+		
+		do {
+		
+		System.out.println("\nVocê tem habilidade com banco de dados ?");
+		System.out.println("\n1 - sim");
+		System.out.println("\n2 - não");
+		System.out.println("Digite sua opção: ");
+
+		op = leia.nextInt();	
+		switch (op) {
+		
+		case 1:
+			System.out.println("sim");
+			
+			break;
+		case 2:
+			System.out.println("não");
+			break;
+		
+		default:
+            System.out.println("\n Opção inválida");
+		}
+		}while(op < 1 || op >2);
+}
+
+		
+		
+		@Override 
 		public void gp() {
 		
 			do {
@@ -325,7 +400,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 				System.out.println("\n3- Python");
 				System.out.println("\n4- RUBY");
 				System.out.println("\n5- PHP");
-				
+				System.out.println("\nDigite a sua opção: "); 
 
 		op = leia.nextInt();	
 		switch (op) {
@@ -365,7 +440,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			System.out.println("\n3- Pleno");
 			System.out.println("\n4- Sênior");
 			System.out.println("\n5- Especialista");
-			
+			System.out.println("\nDigite a sua opção: ");
 
 	op = leia.nextInt();	
 	switch (op) {
@@ -388,14 +463,14 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		break;
 				
 	default:
-        System.out.println("\n Opção inválida");
+        System.out.println("\nOpção inválida");
 }
-			}while(op < 1 || op >2);
+			}while(op < 1 || op >5);
 		}
 		
 		public void fim() {
 			
-			System.out.println("Você foi cadastrado no nosso banco de dados. Boa sorte");
+			System.out.println("\n\nParabéns "+this.nome+", você foi cadastrado no nosso banco de dados. Boa sorte!!");
 		}
 		
 }		
