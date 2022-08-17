@@ -1,7 +1,8 @@
 package com.generention.genjobs.model;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
+
+
 
 public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		
