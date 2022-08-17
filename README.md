@@ -20,3 +20,5 @@ voltar uma opção no menu;
 digitar um número (zero) para finalizar o programa;
 
 gênero (f/m/b);
+
+ux/ui designer
