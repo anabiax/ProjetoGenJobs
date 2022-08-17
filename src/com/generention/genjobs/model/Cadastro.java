@@ -145,11 +145,10 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 		public void profissao() {
 			do {
 			System.out.println("\n Áreas de atuação");
-		    System.out.println("\n1- Desenvolvimento (Full Stack, Front-end, Back-end");
+		    System.out.println("\n1- Desenvolvimento (Full Stack, Front-end, Back-end)");
 		    System.out.println("\n2- DevOps");
 		    System.out.println("\n3- Data Science");
 		    System.out.println("\n4- Gestão de projetos");
-		    System.out.println("\n5- Outros");
 		    System.out.println("\nDigite a sua opção: ");
 
 		           op = leia.nextInt();  
@@ -309,7 +308,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			System.out.println("\n2- Intermédiario");
 			System.out.println("\n3- Avançado");
 			System.out.println("\n4- Fluente");
-			
+			System.out.println("Digite sua opção: ");
 			
 			op = leia.nextInt();	
 			switch (op) {
@@ -325,7 +324,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 				System.out.println("Avançado");
 				break;
 			case 4:
-				System.out.println("Fluente");
+				System.out.println("Fluente\n");
 				break;
 			
 				
@@ -346,6 +345,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 				System.out.println("\n3- 5 ano - 7 anos");
 				System.out.println("\n4- 7 ano - 10 anos");
 				System.out.println("\n5- Mais que 10 anos");
+				System.out.println("\nDigite a sua opção: ");
 
 		op = leia.nextInt();	
 		switch (op) {
