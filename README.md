@@ -1,6 +1,7 @@
 # ProjetoGenJobs
 
-Criação do projeto em java para se cadastrar em uma plataforma de emprego a tecnologia.
+Criação do Projeto Java "GenJobs" proposto pela Generation Brasil com o objetivo de sedimentar alguns fundamentos de POO aprendidos no módulo I.  
+O sistema desenvolvido é voltado para o cadastro de tecnologistas numa plataforma de emprego, no caso GenJobs.
 
 > :construction: Projeto em construção :construction:
 
