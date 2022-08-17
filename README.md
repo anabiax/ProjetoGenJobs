@@ -3,6 +3,8 @@
 Criação do Projeto Java "GenJobs" proposto pela Generation Brasil com o objetivo de sedimentar alguns fundamentos de POO aprendidos no módulo I.  
 O sistema desenvolvido é voltado para o cadastro de tecnologistas numa plataforma de emprego, no caso GenJobs.
 
+
+
 > :construction: Projeto em construção :construction:
 
 itens de atenção a serem implementados:
