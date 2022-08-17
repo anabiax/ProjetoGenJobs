@@ -70,9 +70,9 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			this.endereco = endereco;
 		}
 		
-		public void visualizar() throws InterruptedException  {
+		public void visualizar()   {
 			
-			/*System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
+			System.out.println("\t\tBem vindo a GenJobs, a plataforma de maior empregabilidade de tecnologia da turma 57.\n\n");
 			System.out.println("\t\t\t\tGENJOBS");
 			System.out.println("\n\n\nInforme seus dados cadastrais:");
 			System.out.println("Nome:");
@@ -83,7 +83,7 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 			if(this.cpf.length()!=11)
 			{
 				do {	
-					System.out.println("CPF inválido. Preencha apenas 11 números.");
+					System.out.println("CPF inválido. Preencha apenas 11 dígitos.");
 						System.out.println("CPF: ");
 							this.cpf = leia.nextLine();
 								}while(this.cpf.length()!=11); }
@@ -124,13 +124,13 @@ public class Cadastro implements Desenvolvedorr, Gestor, Dataa, DevOpss {
 					}
 				}while(error); 
 								
-				*/
+				
 				System.out.println("Endereço: ");
 				this.endereco = leia.next();
 				System.out.println("Cidade: ");
 				this.cidade = leia.next();//não da a opção de escrita
 				System.out.println(this.nome+", você será redirecionado....");
-				TimeUnit.SECONDS.sleep(4);
+				
 			 }
 		
 		public void paginaInicial() {
