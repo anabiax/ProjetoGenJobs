@@ -16,6 +16,7 @@ O sistema desenvolvido tem por finalidade cadastrar tecnologistas numa plataform
   
 - Lucas Pereira - <a href="https://www.linkedin.com/in/lucas-pereira-1589a4229/">LinkedIn<a/> <a href="https://github.com/pereiracaslu">GitHub<a/>  
 
+- Pamela Lima - <a href="https://www.linkedin.com/in/pamela-lima-s/">LinkedIn<a/> <a href="https://github.com/LimaPamela">GitHub<a/>  
 
 
 
